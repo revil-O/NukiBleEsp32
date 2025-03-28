@@ -1253,7 +1253,7 @@ PairingState NukiBle::pairStateMachine(const PairingState nukiPairingState) {
       int result = crypto_scalarmult_curve25519(sharedKeyS, myPrivateKey, remotePublicKey);
       if (result != 0) {
         log_e("Error: Failed to calculate DH shared key");
-        nukiPairingResultState = PairingState::Error; // Handle the error gracefully
+        //nukiPairingResultState = PairingState::logger;
         break;
       }
       // end 20250328
